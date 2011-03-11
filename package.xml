@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.4.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+  <name>sfAssetsLibraryPlugin</name>
+  <channel>pear.symfony-project.com</channel>
+  <summary>Full-featured multimedia asset library plugin</summary>
+  <description>The `sfAssetsLibraryPlugin` is a full-featured multimedia asset library plugin. Not only does it allow you to upload and organize your media files (images, PDF documents, Flash objects, and so on) via a web interface, it also stores metadata about each file for easy retrieval or automated copyright and legend inclusion. It is the perfect companion for rich text editors like TinyMCE.
+  </description>
+  <lead>
+    <name>François Zaninotto</name>
+    <user>fzaninotto</user>
+    <email>francois.zaninotto@symfony-project.com</email>
+    <active>yes</active>
+  </lead>
+  <developer>
+   <name>Gabriele Santini</name>
+   <user>blacksun</user>
+   <email></email>
+   <active>yes</active>
+  </developer>
+  <developer>
+   <name>William Garcia</name>
+   <user>wgarcia</user>
+   <email></email>
+   <active>yes</active>
+  </developer>
+  <date>2009-04-20</date>
+  <version>
+    <release>0.9.3</release>
+    <api>0.9.3</api>
+  </version>
+  <stability>
+    <release>beta</release>
+    <api>beta</api>
+  </stability>
+  <license uri="http://www.symfony-project.com/license">MIT license</license>
+  <notes>-</notes>
+  <contents>
+    <dir name="/">
+      <dir name="config">
+        <file name="config.php" role="data"/>
+        <file name="schema.yml" role="data"/>
+      </dir>
+      <dir name="lib">
+        <dir name="helper">
+          <file name="sfAssetHelper.php" role="data"/>
+        </dir>
+        <dir name="model">
+          <file name="sfAsset.php" role="data"/>
+          <file name="sfAssetFolder.php" role="data"/>
+          <file name="sfAssetFolderPeer.php" role="data"/>
+          <file name="sfAssetPeer.php" role="data"/>
+        </dir>
+        <dir name="task">
+          <file name="sfAssetCreateRootTask.class.php" role="data"/>
+          <file name="sfAssetSynchronizeTask.class.php" role="data"/>
+        </dir>
+        <file name="sfAssetException.class.php" role="data"/>
+        <file name="sfAssetRouting.php" role="data"/>
+        <file name="sfAssetsLibraryTools.class.php" role="data"/>
+      </dir>
+      <file name="LICENSE" role="data"/>
+      <dir name="modules">
+        <dir name="sfAsset">
+          <dir name="actions">
+            <file name="actions.class.php" role="data"/>
+          </dir>
+          <dir name="config">
+            <file name="view.yml" role="data"/>
+          </dir>
+          <dir name="i18n">
+            <file name="sfAsset.fr.xml" role="data"/>
+            <file name="sfAsset.de.xml" role="data"/>
+            <file name="sfAsset.it.xml" role="data"/>
+          </dir>
+          <dir name="lib">
+            <file name="BasesfAssetActions.class.php" role="data"/>
+          </dir>
+          <dir name="templates">
+            <file name="_asset.php" role="data"/>
+            <file name="_create_folder_footer.php" role="data"/>
+            <file name="_create_folder_header.php" role="data"/>
+            <file name="_edit_actions.php" role="data"/>
+            <file name="_edit_footer.php" role="data"/>
+            <file name="_edit_form.php" role="data"/>
+            <file name="_edit_form_custom.php" role="data"/>
+            <file name="_edit_header.php" role="data"/>
+            <file name="_list.php" role="data"/>
+            <file name="_list_footer.php" role="data"/>
+            <file name="_list_header.php" role="data"/>
+            <file name="_messages.php" role="data"/>
+            <file name="_search_custom.php" role="data"/>
+            <file name="_search_footer.php" role="data"/>
+            <file name="_search_header.php" role="data"/>
+            <file name="_sidebar_edit.php" role="data"/>
+            <file name="_sidebar_list.php" role="data"/>
+            <file name="_sidebar_search.php" role="data"/>
+            <file name="_sidebar_sort.php" role="data"/>
+            <file name="_thumbnail.php" role="data"/>
+            <file name="createFolderSuccess.php" role="data"/>
+            <file name="editSuccess.php" role="data"/>
+            <file name="listSuccess.php" role="data"/>
+            <file name="massUploadSuccess.php" role="data"/>
+            <file name="popupLayout.php" role="data"/>
+            <file name="searchSuccess.php" role="data"/>
+            <file name="tinyConfigMediaSuccess.php" role="data"/>
+          </dir>
+          <dir name="validate">
+            <file name="createFolder.yml" role="data"/>
+          </dir>
+        </dir>
+      </dir>
+      <file name="README" role="data"/>
+      <dir name="web">
+        <dir name="css">
+          <file name="media.css" role="data"/>
+        </dir>
+        <dir name="images">
+          <file name="archive.png" role="data"/>
+          <file name="bin.png" role="data"/>
+          <file name="delete.png" role="data"/>
+          <file name="doc.png" role="data"/>
+          <file name="edit.png" role="data"/>
+          <file name="filenew.png" role="data"/>
+          <file name="folder.png" role="data"/>
+          <file name="folder_add.png" role="data"/>
+          <file name="folder_delete.png" role="data"/>
+          <file name="folder_edit.png" role="data"/>
+          <file name="folder_go.png" role="data"/>
+          <file name="folder_open.png" role="data"/>
+          <file name="html.png" role="data"/>
+          <file name="image.png" role="data"/>
+          <file name="image_add.png" role="data"/>
+          <file name="images.png" role="data"/>
+          <file name="magnifier.png" role="data"/>
+          <file name="page_delete.png" role="data"/>
+          <file name="page_edit.png" role="data"/>
+          <file name="page_go.png" role="data"/>
+          <file name="page_refresh.png" role="data"/>
+          <file name="pdf.png" role="data"/>
+          <file name="ppt.png" role="data"/>
+          <file name="text_linespacing.png" role="data"/>
+          <file name="txt.png" role="data"/>
+          <file name="unknown.png" role="data"/>
+          <file name="up.png" role="data"/>
+          <file name="xls.png" role="data"/>
+        </dir>
+        <dir name="js">
+          <file name="main.js" role="data"/>
+          <file name="popup.js" role="data"/>
+        </dir>
+      </dir>
+    </dir>
+  </contents>
+  <dependencies>
+    <required>
+      <php>
+        <min>5.1.0</min>
+      </php>
+      <pearinstaller>
+        <min>1.4.1</min>
+      </pearinstaller>
+      <package>
+        <name>symfony</name>
+        <channel>pear.symfony-project.com</channel>
+        <min>1.2.0</min>
+        <max>1.3.0</max>
+        <exclude>1.3.0</exclude>
+      </package>
+    </required>
+  </dependencies>
+  <phprelease>
+ </phprelease>
+  <changelog>
+    <release>
+      <version>
+        <release>0.9.3</release>
+        <api>0.9.3</api>
+      </version>
+      <stability>
+        <release>beta</release>
+        <api>beta</api>
+      </stability>
+      <license uri="http://www.symfony-project.com/license">MIT license</license>
+      <date>2009-04-20</date>
+      <notes>
+        * francois: Removed unused method
+        * francois: Fixed popup usage
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.9.2</release>
+        <api>0.9.2</api>
+      </version>
+      <stability>
+        <release>beta</release>
+        <api>beta</api>
+      </stability>
+      <license uri="http://www.symfony-project.com/license">MIT license</license>
+      <date>2009-04-20</date>
+      <notes>
+        * francois: Fixed typo in folder details
+        * francois: Implemented synchronize task
+      </notes>
+    </release>
+    <release>
+       <version>
+         <release>0.9.1</release>
+         <api>0.9.1</api>
+       </version>
+       <stability>
+        <release>beta</release>
+        <api>beta</api>
+       </stability>
+       <license uri="http://www.symfony-project.com/license">MIT license</license>
+       <date>2009-03-16</date>
+       <notes>
+         * francois: 1.2 compatibility (WIP)
+         * francois: Converted README to Markdown
+         * francois: Fixed wrong exception parameter
+         * francois: Fixed untranslated exception messages
+       </notes>
+     </release>
+  </changelog>
+</package>

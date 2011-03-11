@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="propel" package="plugins.sfAssetsLibraryPlugin.lib.model" defaultIdMethod="native">
+
+  <table name="sf_asset_folder" phpName="sfAssetFolder" treeMode="NestedSet">
+    <behavior name="timestampable" />
+    <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+    <column name="tree_left" type="integer" required="true" default="0" nestedSetLeftKey="1" />
+    <column name="tree_right" type="integer" required="true" default="0" nestedSetRightKey="1" />
+    <column name="name" type="varchar" required="true" />
+    <column name="relative_path" type="varchar" />
+    <unique name="uk_relative_path">
+      <unique-column name="relative_path" />
+    </unique>
+  </table>
+
+  <table name="sf_asset" phpName="sfAsset">
+    <behavior name="timestampable" />
+    <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+    <column name="folder_id" type="integer" required="true" />
+    <foreign-key foreignTable="sf_asset_folder" onDelete="cascade" onUpdate="cascade">
+      <reference local="folder_id" foreign="id" />
+    </foreign-key>
+    <column name="filename" type="varchar" required="true" />
+    <column name="description" type="longvarchar" />
+    <column name="author" type="varchar" />
+    <column name="copyright" type="varchar" size="100" />
+    <column name="type" type="varchar" size="10" />
+    <column name="filesize" type="integer" />
+    <unique name="uk_folder_filename">
+      <unique-column name="folder_id" />
+      <unique-column name="filename" />
+    </unique>
+  </table>
+
+</database>
